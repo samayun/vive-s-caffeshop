@@ -7,34 +7,32 @@ class Box {
         this.length = length;
         this.height = height;
     }
-    int getArea(){
-        return this.length * this.height;
-    }
 
-    void display(){
-        System.out.println(this.getArea());
+    void getArea(){
+        System.out.println("The area is : " + this.length * this.height);
     }
 
 }
 
 class Box3d extends Box {
+    public int length;
+    public int height;
     public int breadth;
     Box3d(int length, int height, int breadth){
         super(length, height);
-        
+        this.breadth = breadth;
     }
-    int getArea(){
-        return this.length * this.height * this.breadth;
-    }
-    void display(){
-        System.out.println(this.getArea());
+    void getVolume(){
+        System.out.println("The volume is : " + this.length * this.height * this.breadth);
     }
 }
 
 
 class Inherit {
     public static void main(String[] args) {
-        Box3d bx = new Box3d(5,2, 15);
-        bx.display();
+        Box bx = new Box(5,2);
+        bx.getArea();
+        Box3d bx2 = new Box3d(5,2, 15);
+        bx2.getVolume();
     }
 }
