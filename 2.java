@@ -18,6 +18,8 @@ class Box3d extends Box {
     public int breadth;
     Box3d(int length, int height, int breadth){
         super(length, height);
+        this.length = length;
+        this.height = height;
         this.breadth = breadth;
     }
     void getVolume(){
