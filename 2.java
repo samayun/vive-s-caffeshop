@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class Box {
     public int length;
     public int height;
@@ -28,7 +26,7 @@ class Box3d extends Box {
 }
 
 
-class Inherit {
+class Main {
     public static void main(String[] args) {
         Box bx = new Box(5,2);
         bx.getArea();
